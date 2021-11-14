@@ -1,0 +1,29 @@
+@media only screen and (max-width: 46.1875em) {
+    .category {
+        display: none;
+    }
+    .grid__column-10 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .grid__column-2-4 {
+        width: 33.33%;
+    }
+   .navigation-manual {
+       margin-top: -230px;
+   }
+   .navigation-auto {
+        margin-top: 530px;
+   }
+   .slide img {
+       height: 75%;
+   }
+   .slider {
+       height: 567px;
+   }
+   .category-item__link {
+       line-height: 2rem;
+   }
+}

@@ -1,0 +1,123 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #c4bdbd;
+    --star-gold-color: #ffce3d;
+    --height-width-ball: 10px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+    transition: .5s;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    background-color: var(--white-color);
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    line-height: 1.6rem;
+}
+
+.btn-size-s {
+    height: 32px;
+    font-size: 13px;
+    padding: 0 8px;
+}
+
+.btn.btn-normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn-primary {
+    color: var(--white-color);
+    background-color: rgb(201, 61, 61);
+}
+
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-input__lable {
+    font-size: 1.4rem;
+}
+
+.select-input_options {
+    width: 120px;
+    padding: 0 0 0 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: purple;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.scrollY-change__black--active {
+    color: black;
+}
