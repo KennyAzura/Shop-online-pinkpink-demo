@@ -87,8 +87,8 @@ body {
 }
 
 .btn.btn-primary {
-    color: var(--white-color);
-    background-color: rgb(201, 61, 61);
+    color: black;
+    background-image: linear-gradient(to right,#e4d340 0%,rgb(224, 150, 12) 100%);
 }
 
 .select-input {
@@ -113,7 +113,7 @@ body {
     border: none;
     outline: none;
     font-weight: bold;
-    color: purple;
+    color: black;
     background-color: transparent;
     cursor: pointer;
 }

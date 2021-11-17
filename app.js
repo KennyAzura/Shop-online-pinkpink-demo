@@ -8,7 +8,7 @@ const contactLink = $('.header__contact-link h2')
 const contactLinkPhone = $('.header__contact-link h3')
 const nameLogo1 = $('.header__logo-name-1')
 const nameLogo2 = $('.header__logo-name-2')
-const headerNavigation = $$('.header__nav-item li')
+
 
 const appProduct = {
     currentIndex: 0,
@@ -645,7 +645,7 @@ const appProduct = {
 
     quantityProductsDefault() {
         let products = this.products
-        let items = document.querySelector('.home-product__add').children;
+        let items = $('.home-product__add').children;
         for (let i = 0; i < items.length; i++) {
             for (let z = 0; z < products.length; z++) {
                 if (products[i].id > 10) {}
@@ -656,10 +656,9 @@ const appProduct = {
     handleEvent() {
 
         _this = this
-        let categoryList = document.querySelector('.category-list').children;
-        let items = document.querySelector('.home-product__add').children;
-        let homProductItem = document.querySelector('.home-product-items')
-
+        let categoryList = $('.category-list').children;
+        let items = $('.home-product__add').children;
+        let btnType = $('.home-filter__btn-list').children;
 
         for (let i = 0; i < categoryList.length; i++) {
             categoryList[i].onclick = function(e) {
@@ -686,21 +685,6 @@ const appProduct = {
             }
         }
 
-        let btnRedirect = $('.home-filter__page-control').children
-        for (let i = 0; i < btnRedirect.length; i++) {
-            btnRedirect[i].onclick = function(e) {
-                e.preventDefault();
-                let productItem = _this
-                let productsItem = productItem.products
-                for (let i = 0; i < productsItem.length; i++) {
-                    if (productsItem[i].id > 10) {
-                        items[i].style.display = 'none'
-                    }
-                }
-            }
-        }
-
-
         // Slider
         let counter = 1;
         setInterval(function() {
@@ -717,13 +701,11 @@ const appProduct = {
                 contactLinkPhone.classList.add('scrollY-change__black--active')
                 nameLogo1.classList.add('scrollY-change__black--active')
                 nameLogo2.classList.add('scrollY-change__black--active')
-                headerNavigation.classList.add('scrollY-change__black--active')
             } else {
                 contactLink.classList.remove('scrollY-change__black--active')
                 contactLinkPhone.classList.remove('scrollY-change__black--active')
                 nameLogo1.classList.remove('scrollY-change__black--active')
                 nameLogo2.classList.remove('scrollY-change__black--active')
-                headerNavigation.classList.remove('scrollY-change__black--active')
             }
         }
         

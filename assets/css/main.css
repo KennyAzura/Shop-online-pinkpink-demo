@@ -268,8 +268,12 @@
 }
 
 .header__search-btn:hover {
-    opacity: 0.7;
+    background: linear-gradient(0deg, #e2cf24 0%, #00d4ff 100%);
     cursor: pointer;
+}
+
+.header__search-btn:hover .header__search-btn-icon {
+    color: black;
 }
 
 .header__search-btn-icon {
@@ -717,6 +721,16 @@
 .home-filter__btn {
     min-width: 94px;
     margin-right: 12px;
+    font-weight: bold;
+    color: white;
+    background-image: linear-gradient(to right,red 0,#e4d340 51%,orange 100%);
+    background-size: 200%;
+    transition: .5s ease-in-out;
+}
+
+.home-filter__btn:hover {
+    color: black;
+    background-position: right center;
 }
 
 .home-filter__page {
