@@ -8,6 +8,7 @@ const contactLink = $('.header__contact-link h2')
 const contactLinkPhone = $('.header__contact-link h3')
 const nameLogo1 = $('.header__logo-name-1')
 const nameLogo2 = $('.header__logo-name-2')
+const navItem = $$('.header__nav-item-navigation')
 
 
 const appProduct = {
@@ -658,7 +659,6 @@ const appProduct = {
         _this = this
         let categoryList = $('.category-list').children;
         let items = $('.home-product__add').children;
-        let btnType = $('.home-filter__btn-list').children;
 
         for (let i = 0; i < categoryList.length; i++) {
             categoryList[i].onclick = function(e) {
@@ -701,11 +701,18 @@ const appProduct = {
                 contactLinkPhone.classList.add('scrollY-change__black--active')
                 nameLogo1.classList.add('scrollY-change__black--active')
                 nameLogo2.classList.add('scrollY-change__black--active')
+                for(let i = 0; i < navItem.length; i++) {
+                    navItem[i].classList.add('scrollY-change__black--active')
+                }
+                
             } else {
                 contactLink.classList.remove('scrollY-change__black--active')
                 contactLinkPhone.classList.remove('scrollY-change__black--active')
                 nameLogo1.classList.remove('scrollY-change__black--active')
                 nameLogo2.classList.remove('scrollY-change__black--active')
+                for(let i = 0; i < navItem.length; i++) {
+                    navItem[i].classList.remove('scrollY-change__black--active')
+                }
             }
         }
         
@@ -714,9 +721,12 @@ const appProduct = {
 
     render() {
         const htmls = this.products.map((product, index) =>
-            `<div id="${product.id}" data-category="${product.typeof}" data-price="${product.priceCurrent}" class="grid__column-2-4">
-                <div class="home-product-item">
-
+            `<div id="${product.id}" data-category="${product.typeof}" data-price="${product.priceCurrent}" class="grid__column-2-4 home-product-items">
+            <div class="home-product-item">
+                    <span class="home-product-item__transition"></span>
+                    <span class="home-product-item__transition"></span>
+                    <span class="home-product-item__transition"></span>
+                    <span class="home-product-item__transition"></span>
                     <div class="home-product-item__img" style="background-image: url('${product.image}')"></div>
                     <h4 class="home-product-item__name">${product.name}</h4>
                     <div class="home-product-item__price">
