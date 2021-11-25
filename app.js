@@ -644,16 +644,6 @@ const appProduct = {
         })
     },
 
-    quantityProductsDefault() {
-        let products = this.products
-        let items = $('.home-product__add').children;
-        for (let i = 0; i < items.length; i++) {
-            for (let z = 0; z < products.length; z++) {
-                if (products[i].id > 10) {}
-            }
-        }
-    },
-
     handleEvent() {
 
         _this = this
@@ -771,7 +761,6 @@ const appProduct = {
 
     start() {
         this.defineProperties()
-        this.quantityProductsDefault()
         this.handleEvent()
         this.loadCurrentProduct()
         this.render()
